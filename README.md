@@ -1,6 +1,19 @@
-# JS Informations
+# Javascript Notes
+
 	Collection of notes about javascript , useful to refresh  your memory ;)
 
+
+
+			     _        _    __     __     _      ____      ____    ____                 ____    _____  
+			  U |"| u U  /"\  u\ \   /"/uU  /"\  u / __"| uU /"___|U |  _"\ u     ___    U|  _"\ u|_ " _| 
+			 _ \| |/   \/ _ \/  \ \ / //  \/ _ \/ <\___ \/ \| | u   \| |_) |/    |_"_|   \| |_) |/  | |   
+			| |_| |_,-./ ___ \  /\ V /_,-./ ___ \  u___) |  | |/__   |  _ <       | |     |  __/   /| |\  
+			 \___/-(_//_/   \_\U  \_/-(_//_/   \_\ |____/>>  \____|  |_| \_\    U/| |\u   |_|     u |_|U  
+			  _//      \\    >>  //       \\    >>  )(  (__)_// \\   //   \\_.-,_|___|_,-.||>>_   _// \\_ 
+			 (__)     (__)  (__)(__)     (__)  (__)(__)    (__)(__) (__)  (__)\_)-' '-(_/(__)__) (__) (__)
+
+
+ 
 ## Variable Initialization
 
 allways use the keyword  'var' for the best practice ,  this keyword limit
@@ -152,3 +165,6 @@ and so on ..
   obj.hasOwnPorperty('name') // test id obj has given property  and not inherited
 
 
+
+
+(C) Ali Amechghal  - MIT LICENCE

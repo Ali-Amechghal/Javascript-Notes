@@ -82,6 +82,7 @@ and so on ..
  Some usefull array methods
 
 	```javascript 
+
  		 var arr =  ['f','i','j'];
 		 arr.length //as property of Array
 		 
@@ -108,7 +109,6 @@ and so on ..
 		 function comp(a,b){...}
 
 		 var ar =  new Array(5).join('a'); //create a string with 'aaaa' from array
-
 	```
 ## Strings
 

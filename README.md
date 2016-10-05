@@ -13,7 +13,7 @@
 			 (__)     (__)  (__)(__)     (__)  (__)(__)    (__)(__) (__)  (__)\_)-' '-(_/(__)__) (__) (__)
 
 
- 
+
 ## Variable Initialization
 
 allways use the keyword  'var' for the best practice ,  this keyword limit
@@ -80,35 +80,36 @@ and so on ..
 
 ## Arrays
  Some usefull array methods
-```javascript 
- var arr =  ['f','i','j'];
- arr.length //as property of Array
- 
- arr.pop() // delete the last element and return it
- arr.push('') // arr.push([]) // put values in array 
+
+	```javascript 
+ 		 var arr =  ['f','i','j'];
+		 arr.length //as property of Array
+		 
+		 arr.pop() // delete the last element and return it
+		 arr.push('') // arr.push([]) // put values in array 
 
 
- arr.shift() ; // delete the first element in the array and return it
- arr.unshift('','',''); // add values to array starting from the first position
- var str = arr.join(','); // return array values separated by ','
- var arr = str.split(',') // create an  array
- //NB :  push and pop is faster than shift unshift 
+		 arr.shift() ; // delete the first element in the array and return it
+		 arr.unshift('','',''); // add values to array starting from the first position
+		 var str = arr.join(','); // return array values separated by ','
+		 var arr = str.split(',') // create an  array
+		 //NB :  push and pop is faster than shift unshift 
 
- ar.splice(indexstart , nbelement , [elem1, elem2,..])
- arr.splice(0,1) // delete one element starting from 0
- arr.splice(0,1,'A','B'); // delete 1 element from 0 and insert A,B 
- arr.splice(0,0,'A','B') // insert A, B in the position 0 without removing any element
- //NB : any element , the index can be negative to start from end of array
- var sub  =  arr.slice(0,2); //reurn array with two elments starting from 0
- var sub = arr.slice(1) // return array with all elements starting from 1st position
- arr.reverse() // reverse order
- arr.sort()//sort by natural order
- arr.sort(comp) ; 
- function comp(a,b){...}
+		 ar.splice(indexstart , nbelement , [elem1, elem2,..])
+		 arr.splice(0,1) // delete one element starting from 0
+		 arr.splice(0,1,'A','B'); // delete 1 element from 0 and insert A,B 
+		 arr.splice(0,0,'A','B') // insert A, B in the position 0 without removing any element
+		 //NB : any element , the index can be negative to start from end of array
+		 var sub  =  arr.slice(0,2); //reurn array with two elments starting from 0
+		 var sub = arr.slice(1) // return array with all elements starting from 1st position
+		 arr.reverse() // reverse order
+		 arr.sort()//sort by natural order
+		 arr.sort(comp) ; 
+		 function comp(a,b){...}
 
- var ar =  new Array(5).join('a'); //create a string with 'aaaa' from array
+		 var ar =  new Array(5).join('a'); //create a string with 'aaaa' from array
 
-
+	```
 ## Strings
 
  initiaalisation of strings  :  

@@ -14,8 +14,15 @@
 		Number(new Number(123)) will return 123
 		Number (new Number('123')) will return 123
 		Number(null) will return 0 as Number(new Number(null)) too
-
+		5  + null = 5 //null become 0
 	```
+	Invocking methods in literal number
+	```javascript
+		1..toString();
+		1 .toString();
+		(1).toString(); //my prefered one
+		1.0 .toString(); //with floating point number
+	``
 ## Strings
 
 	
@@ -263,5 +270,72 @@
 
 
 ## Synthaxe
+	some tips and tricks when about javascript synthaxe 
+	always yse '()' when you want to use literal object inside eval method
+		```javascript
+			eval('{name:"name value"}') // it will consider object as string with "name value" as value
+			//insted use ()
+			eval('({name:"name value"})') // => {name:'name value'}
+		```
+		
+	### ASI (Automatic Simicolon  Insertion)
+			Javasctipt compiler insert automaticly the simicolon in this cases:
+				- after a line terminator
+				- afiter closing braces
+				- end of file
+			but not after return or after [] , or even after () , so consider  using simicolon as its a best practice;
+	### Simicolon problems
+		in some cases if you dont use ";" your code can break
+
+		Ex 1 : 
+			```javascript
+				//what you type
+				function test(){
+					return 
+					{
+						name:'name value'
+					}
+				}
+				//what you get
+				function test(){
+					return;
+					{
+						name:"name value";
+					}
+				}
+
+			```	
+		the compiler add ; in the end of line , so the function will return undefined and not the object as expected
+
+		Ex 1 :
+			The javascript compiler dont put simicolon after '()'
+			```javascript
+			   //what you type 
+				function test(){}
+				test()
+				['a','b'].forEach(function (item){console.log(item)});
+				//what you get
+				test()
+				undefined['a','b'].forEach(function (item){console.log(item)});
+				//TypeError: Cannot read property 'b' of undefined
+
+			```
+## Operators
+		the "+" operator can be used with arrays
+		[1,2] + [3] : '1,23' :  it will convert arrays to strings and concatenate them
+
+		void O // will return undefined , usefull when you want to be sure you test about undefined
+		void window.open('url') //if you dont want to repalce current document object
+		
+### Comparing 
+		'abc' == new String('abc') //will return true
+		'abc' === new String('abc') //will return false
+
+
+
+
+
+
+
 
 

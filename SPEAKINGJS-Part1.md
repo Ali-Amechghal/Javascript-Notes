@@ -45,11 +45,44 @@
 
 	```javascript
 		'str'.length = 2; //no effect
-		'str'.newProp = 1 //no effect we cannot add the property to primitives , 'str'.newProp call it will return 'undefined'
-
-
+		'str'.newProp = 1 //no effect we cannot add the property to primitives 'str'.newProp call it will return 'undefined'
 	```
+
+	Primive dont have itw own methods but it referes to the wrapper methods
+	'abc'.chatAt === String.prototype.charAt // return true , its the same
+
 	NB : Unkonw propoerty return always 'undefiend'
+### Coercion
+	implictit type conversion , '1' * '2' -> 2
+	Coercion support Number , String , Boolean , Object
+### Wrappers
+	Convert primitive to wrapper object:
+	```javascript
+		var str = new String('str primitive value');
+		typeof str // 'object'
+		'abc' instanceof String // false , a primitive value is not an object of its wrapper
+		str instanceof String // true 
+	```
+	unwrapper the object to primitive value
+	```javascript
+	    var numInstance = new Number('123');
+		Number(numInstance) // 123
+		var num = Number(numInstance)
+		//or
+		var num  = numInstance.ValueOf();
+		typeof num // 'number'
+	```
+	Unwrappers works for Number, Object and String but not boolean
+	Object() can convert to any type , typeof (Object('str')) 'object' , and (Object('str') instanceof String return true)
+	Object(undefined) return {}
+
+	Number() :
+			when we call Number() it will cal first valueOf() method if its not defined it will call toString()
+			Numner({}) or Number(undefined)  return NaN
+	
+
+		
+
 
 ## Objects 
 	

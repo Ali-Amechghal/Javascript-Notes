@@ -141,6 +141,9 @@
 
 	{} empty object is considered true
 	[] empry array is considered true
+	Object are always True :
+	Boolean(new Boolean(false)) //True , it will create object , that will tested as true value
+	Boolean([]) Or Boolean({}) //true
 
 ## Binary logical
 

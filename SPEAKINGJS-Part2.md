@@ -1,11 +1,12 @@
 # Speaking JS  (Part 2)
 
 	List of notes and tricks exctracted from SpeakingJS Book , greate Boook by the way :)
-	This part cover Numbers, Strings , Functions , Closure, Exception , and Arrays
+	This part cover Numbers, Strings  , Closure, Exception , and Arrays
 
 ## Numbers
 
 	All numbers including float one are of type number , there no float , int 
+	and All numberes are 64bits Floating point (double in java) , but Javascript hide ',' if there is not numbers after it
 
 	Numebr()  : consider this constructor as kind of wrapper object in java , if ti t cannot convert the given value to Number , it will return NaN
 	```javascript
@@ -15,6 +16,9 @@
 		Number (new Number('123')) will return 123
 		Number(null) will return 0 as Number(new Number(null)) too
 		5  + null = 5 //null become 0
+		undefiend == NaN //true
+		null == 0 //true
+		false == 0 ;  true == 1 //true
 	```
 	Invocking methods in literal number
 	```javascript
@@ -23,9 +27,25 @@
 		(1).toString(); //my prefered one
 		1.0 .toString(); //with floating point number
 	``
+	To parse a number from string or others objects always use Number() insted of parseFloat() , that will avoid some issues like :
+		```javascript
+ 			//parseFloat() vs Number()
+ 			parseFloat(true) // NaN
+ 			Number(true) //1
+		```
+	To test if number is NaN , use one of this methods:
+		```javascript
+			isNaN(num) 
+			value != value //compare a value with it self (NaN not equals to NaN)
+		```	
+	To generate Infinity "Constant" 
+		```javascript
+			1/-0  == -Infinity
+			1/0  == Infinity
+		```
 ## Strings
+	Strings in javascript like in java are immutable , and 16bits unicode UTF-16, 4 hexa digits or 2 bytes
 
-	
 	var str = 'abc'
 	you can access char in the using index , 
 	str[1]  : 'b'
@@ -36,135 +56,37 @@
 		str.trim() // trim spaces 
 		str.upperCase()
 		str.lowerCase()
-		str.indexOf('b') : get index of given char , it will print -1 if no occurance found
+		str.indexOf('b') : get index of given char , it will print -1 if no 
+		occurance found
+		'str'.split('delimiter',[limit]) //split a given string with , limit starting from 1st position
+		'str'.replace(regex ,value);
+		'str'.search(reg) //return first position
 	```
 
-
-## Functions
-	
-	One of the most important concept when you learn functions in javascript is the hoising , all functions are hoisted
-	thats mean the function declation is moved to the top of the scope, consider this example
-
-
-	```javascript
-		function hoiz(){
-			do(); //calling the 'do' function before its declation , no  problem !
-
-			function do(){}
-
-		}
-
-		// how it will become after interpretation, it will be hoisted , like this
-		function hoiz(){
-			function do(){} //the function declation is moved to the top
-			do(); //calling the 'do' function before its declation , no  problem !
-
-		}
-
-	```	
-
-   But there is an excpetion to this rule , the function expression declarted with var are not hoisted !
-   Consider this example
+	Escaping lines in String with \:
+		```javascript
+			var str = 'written \
+						new Line';
+		```
+	Construct string from char code array:
+		```javascript
+			String.prototype.fromCharCode.apply(null , arr);
+			String.prototype.charCodeAt(position);
+		``
+### Comparing two chars
+	when you compare characters always unifiy the case or use localCompare() method
+		```javascript
+		    //test without unifying case
+			'a' < 'b' //true
+			'a' < 'B' //false
+			//
+		```
 
 
 
-	```javascript
-		function hoiz(){
-			do(); //calling the 'do' function before its declation , Error cause the function is declared as var expression
-
-			var do = function (){} //declare a function as expression
-
-		}
-
-		// what a compiler see  , the declaration will be hoisted but without initialization and definition
-		function hoiz(){&
-			var do;
-			do();
-			do = function(){}
-		}
-
-	```
-	variable declared with var keyword are hosted but not initialized
-
-	```javascript
-		function hoiz(){
-			console.log(tmp);
-			if(true){
-				var tmp='tmpValue';
-			}
-		}
-
-		// what a compiler see  , the declaration will be hoisted but without initialization and definition
-		function hoiz(){&
-			var tmp;
-			console.log(tmp);  //undefined in this case cause not initialized
-			if(true){
-				tmp = 'tmpValue';
-			}
-			
-		}
-
-	```
-	bind a function to current object in case of array method like forEach , map,  filter , ...
-	
-	```javascript
-		var obj  = {
-			name:'sorrow maker',
-			arr:[1,2,3];
-			describe:function(){
-				this.arr.forEach(function(item){
-						this.name // it will get 'sorrow maker' as value
-					}, this) //this, used to link inside callback to the current object
-			}
-		}
-	```
-
-### Extract Method
-	to extract a method from object and make it as a function , you can use bind methodto avoid error
-	```javascript
-		var obj = {
-			name:'sorrow maker',
-			describe:function(){
-				return this.name;
-			}
-		}
-
-		//linking without bind method
-		var func =  obj.describe;
-		func(); // TypeError cannot find property name , cause in this case this refer to the current call object , in our case its global or window 
-
-		//linking using bind
-		var func =  obj.describe.bind(obj);
-		func() // will return 'sorrow maker'
-
-	```
-
-### Arguments objets
-
-	arguments is an object created for each function adn it contains all function arguments  including the caller and the function name
-	the structure of arguments object is like bellow:
-		arguments {'0' :'firstparamvalue' , 
-				   '1' : 'secondpraamvalue'}
-	its important to note that , arguements are not an array , its an object with indices as keys ,and it has a length property
-		
-	to convert arguments object to an array you can use the code bellow:
-
-	```javascript
-
-		var arrArguments = [].slice().call(arguemnts);
-		//Or
-		Array.prototype.slice.call(arguements);
-
-	```	
-
-	to initalize the optional parameter :
 
 
-	```javascript
 
-		optionalParam = optionalParam || 0; // it give 0 as value to optional param if no value is specified
-
-	```	
 
 
 ## Exceptions

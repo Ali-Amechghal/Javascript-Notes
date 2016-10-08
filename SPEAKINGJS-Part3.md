@@ -206,7 +206,12 @@
             var newFct = Fct.bind(objctContext);
 
         ``` 
+        NB : apply dont work with constructors; you can bypass it like this
+        ```javascript
+             var arr = [2016,7,15];
+             var date =  new (Function.prototype.bind.apply(Date, [null].concat(arr));
 
+        ``
     ### Object Wrapper
         ```javascript
 
@@ -219,4 +224,18 @@
                 function isObject(value){
                     return value === Object(value)
                 }
+    ### Prototype Relactionship
+        ```javascript
+            var person = {
+                
+                describe:function(){
+                    return this.name;
+                }
+            }
+            //create object that use person as super class and add properties
+            var programmer=Object.crezate(person , {name:'Ali'});
+
+        ```
+
+
 

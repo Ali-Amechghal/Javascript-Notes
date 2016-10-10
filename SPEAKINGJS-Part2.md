@@ -8,7 +8,7 @@
 	All numbers including float one are of type number , there no float , int 
 	and All numberes are 64bits Floating point (double in java) , but Javascript hide ',' if there is not numbers after it
 
-	Numebr()  : consider this constructor as kind of wrapper object in java , if ti t cannot convert the given value to Number , it will return NaN
+	Numebr()  : consider this constructor as kind of wrapper object in java , if it cannot convert the given value to Number , it will return NaN
 	```javascript
 		Number('abc') will return NaN
 		Number('123') will return 123
@@ -27,7 +27,7 @@
 		(1).toString(); //my prefered one
 		1.0 .toString(); //with floating point number
 	``
-	To parse a number from string or others objects always use Number() insted of parseFloat() , that will avoid some issues like :
+	To parse a number from string or others objects always use Number() instead of parseFloat() , that will avoid some issues like :
 		```javascript
  			//parseFloat() vs Number()
  			parseFloat(true) // NaN
@@ -81,12 +81,6 @@
 			'a' < 'B' //false
 			//
 		```
-
-
-
-
-
-
 
 
 ## Exceptions
@@ -196,7 +190,7 @@
 	always yse '()' when you want to use literal object inside eval method
 		```javascript
 			eval('{name:"name value"}') // it will consider object as string with "name value" as value
-			//insted use ()
+			//instead use ()
 			eval('({name:"name value"})') // => {name:'name value'}
 		```
 		

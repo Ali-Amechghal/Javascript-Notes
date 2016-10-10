@@ -138,7 +138,7 @@
     ``` 
     If you change a parameter the equivalent property in arguments object will be changed , but not in strict mode
 
-    You can use a named parameter , but using an object insted of separated parameters
+    You can use a named parameter , but using an object instead of separated parameters
         function iUseNamedParam({start:0 , step:1})
 
 ### IIFE (Immediatly invocked function expression)

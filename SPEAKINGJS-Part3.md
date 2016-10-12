@@ -233,8 +233,9 @@
                 }
             }
             //create object that use person as super class and add properties
-            var programmer=Object.crezate(person , {name:'Ali'});
-
+            var programmer=Object.create(person , {name:'Ali'});
+            Object.getPrototypeOf(programmer) // will get person oject
+            pereson.isPrototypeOf(programmer) // true
         ```
 
 

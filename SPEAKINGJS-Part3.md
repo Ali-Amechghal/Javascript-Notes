@@ -247,6 +247,7 @@
 
         ```
     ### Properties
+
     define object properties 
         ```javascript
           //create an empty object with properties
@@ -255,7 +256,11 @@
                     value:'default name',
                     enumerable:true , //it can be listed with forEach
                 }
-                })
+                });
+            //or creating a single property
+            Obeject.defineProperty(instance , 'name' , { configurable:false});
+            //get the descriptor
+            Object.getOwnPropertyDescriptor(instance , 'name');
         ```
     listing object properties
       ```javascript
@@ -272,6 +277,7 @@
         Object.hasOwnProperty(instance ,  property_name);
     ```
     When we create a propery with descriptor (defineProperty) , the property enumerable , configurable and writable are false
+
 
 
 

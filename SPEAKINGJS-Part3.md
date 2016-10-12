@@ -236,7 +236,43 @@
             var programmer=Object.create(person , {name:'Ali'});
             Object.getPrototypeOf(programmer) // will get person oject
             pereson.isPrototypeOf(programmer) // true
+
+            //
+            var a={}
+            var b=Object.create(a);
+            var c =Object.create(b);
+
+            a.isPrototypeOf(b) //true
+            a.isPrototypeOf(c) //true
+
         ```
+    ### Properties
+    define object properties 
+        ```javascript
+          //create an empty object with properties
+            var instance = Object.create({} ,{
+                name:{
+                    value:'default name',
+                    enumerable:true , //it can be listed with forEach
+                }
+                })
+        ```
+    listing object properties
+      ```javascript
+        //getting object and super object properties
+        Object.keys(insance).forEach(function(element , index, array){
+            });
+        for (key in instance){}
+
+        //getting object properties only
+        Object.getOwnPropertyNames(object).forEach(function(element , index , arr){
+                console.log(element);
+            });
+        //check if property bellown to the current object and not super object
+        Object.hasOwnProperty(instance ,  property_name);
+    ```
+    When we create a propery with descriptor (defineProperty) , the property enumerable , configurable and writable are false
+
 
 
 

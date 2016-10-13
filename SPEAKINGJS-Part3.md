@@ -275,6 +275,7 @@
             });
         //check if property bellown to the current object and not super object
         Object.hasOwnProperty(instance ,  property_name);
+        
     ```
     When we create a propery with descriptor (defineProperty) , the property enumerable , configurable and writable are false
 

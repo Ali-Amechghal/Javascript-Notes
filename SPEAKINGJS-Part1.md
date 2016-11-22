@@ -149,11 +149,11 @@
 
 	&& return first if is false and second if the first is true
 	|| return the first if is true and second if the result id false
-
+```javascript
 	NaN && 'abc'  will return NaN
 	123 && 'abc'  will return 'abc'
 
 	'abc' || 123  will return abc
 	 ''   || 123  will return 123
-
+```
 

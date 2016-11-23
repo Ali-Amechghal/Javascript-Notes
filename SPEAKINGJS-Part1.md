@@ -128,10 +128,10 @@
 
 	Another difference between null and undefined is the type, null is considered as an object 
 
-	```javascript
+```javascript
 		typeof null // 'object'
 		typeof undefined // ''undefined
-	```
+```
 
 ## Falsy values
 

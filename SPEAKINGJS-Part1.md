@@ -120,11 +120,11 @@
 ```
 	You can shortcut the test of null and undefined by testing  it as falsy  value
 	
-	```javascript
+```javascript
 		if(myvar === null ||  myvar === undefined )
 		//same as		
 		if(!myvar)
-	```	
+```	
 
 	Another difference between null and undefined is the type, null is considered as an object 
 

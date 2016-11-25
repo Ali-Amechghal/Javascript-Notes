@@ -110,14 +110,14 @@
 	Null  is equivalent to no object exist , and you can use null as a value for initialization
 
 	Undefiend and Null dont have any properties , and they are a falsy value 
-	```javascript
+```javascript
 		if(null) console.log('null true');
 		 else console.log('null false'); //display null false
 
 		if(undefined) console.log('undefined true');
 		 else console.log('undefined false') ; // display undefined false
 	 
-	```
+```
 	You can shortcut the test of null and undefined by testing  it as falsy  value
 	
 	```javascript

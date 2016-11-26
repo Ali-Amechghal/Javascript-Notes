@@ -93,7 +93,7 @@
 
 	Undefined is equivalent to no value or unintialized variable , or missing parametre or inexistent object property
 	
-	```javascript
+```javascript
 		var  a; 
 		console.log(a); //undefined , unintialized variable
 		function test(param){
@@ -105,7 +105,7 @@
 		//inexistent property
 		var obj = {firstname:'Ali'}
 		console.log(obj.lastname); //undefined
-	```
+```
 
 	Null  is equivalent to no object exist , and you can use null as a value for initialization
 

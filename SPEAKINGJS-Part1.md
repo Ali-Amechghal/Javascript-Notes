@@ -64,14 +64,14 @@
 		str instanceof String // true 
 ```
 	unwrapper the object to primitive value
-	```javascript
+```javascript
 	    var numInstance = new Number('123');
 		Number(numInstance) // 123
 		var num = Number(numInstance)
 		//or
 		var num  = numInstance.ValueOf();
 		typeof num // 'number'
-	```
+```
 	Unwrappers works for Number, Object and String but not boolean
 	Object() can convert to any type , typeof (Object('str')) 'object' , and (Object('str') instanceof String return true)
 	Object(undefined) return {}

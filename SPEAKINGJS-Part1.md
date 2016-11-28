@@ -57,12 +57,12 @@
 	Coercion support Number , String , Boolean , Object
 ### Wrappers
 	Convert primitive to wrapper object:
-	```javascript
+```javascript
 		var str = new String('str primitive value');
 		typeof str // 'object'
 		'abc' instanceof String // false , a primitive value is not an object of its wrapper
 		str instanceof String // true 
-	```
+```
 	unwrapper the object to primitive value
 	```javascript
 	    var numInstance = new Number('123');

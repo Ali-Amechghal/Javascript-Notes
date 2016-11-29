@@ -43,10 +43,10 @@
 	Primitives types : boolean, string, null undefined, number
 	Primitives are immutable , they cannot be changed
 
-	```javascript
+```javascript
 		'str'.length = 2; //no effect
 		'str'.newProp = 1 //no effect we cannot add the property to primitives 'str'.newProp call it will return 'undefined'
-	```
+```
 
 	Primive dont have itw own methods but it referes to the wrapper methods
 	'abc'.chatAt === String.prototype.charAt // return true , its the same

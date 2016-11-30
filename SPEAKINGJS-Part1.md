@@ -30,13 +30,13 @@
 ```
 
 	Statement  :
-			```javascript
+```javascript
 				if(y>=0)
 					result = y;
 				else
 					result = x;
 
-			```
+```
 
 ## Primitives
 

@@ -25,9 +25,9 @@
 	Statement  do things while Expression produce value
 
 	Expression  :
-			```javascript
+```javascript
 				var result = (y>=0) ? y: X;
-			```
+```
 
 	Statement  :
 			```javascript

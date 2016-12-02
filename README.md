@@ -81,7 +81,7 @@ and so on ..
 ## Arrays
  Some usefull array methods
 
-	```javascript
+```javascript
  		 var arr =  ['f','i','j'];
 		 arr.length //as property of Array
 		 

@@ -9,7 +9,7 @@
 	and All numberes are 64bits Floating point (double in java) , but Javascript hide ',' if there is not numbers after it
 
 	Numebr()  : consider this constructor as kind of wrapper object in java , if it cannot convert the given value to Number , it will return NaN
-	```javascript
+```javascript
 		Number('abc') will return NaN
 		Number('123') will return 123
 		Number(new Number(123)) will return 123
@@ -19,7 +19,7 @@
 		undefiend == NaN //true
 		null == 0 //true
 		false == 0 ;  true == 1 //true
-	```
+```
 	Invocking methods in literal number
 	```javascript
 		1..toString();

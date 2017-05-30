@@ -21,28 +21,28 @@
 		false == 0 ;  true == 1 //true
 ```
 	Invocking methods in literal number
-	```javascript
+```javascript
 		1..toString();
 		1 .toString();
 		(1).toString(); //my prefered one
 		1.0 .toString(); //with floating point number
-	``
+```
 	To parse a number from string or others objects always use Number() instead of parseFloat() , that will avoid some issues like :
-		```javascript
+```javascript
  			//parseFloat() vs Number()
  			parseFloat(true) // NaN
  			Number(true) //1
-		```
+```
 	To test if number is NaN , use one of this methods:
-		```javascript
+```javascript
 			isNaN(num) 
 			value != value //compare a value with it self (NaN not equals to NaN)
-		```	
+```	
 	To generate Infinity "Constant" 
-		```javascript
+```javascript
 			1/-0  == -Infinity
 			1/0  == Infinity
-		```
+```
 ## Strings
 	Strings in javascript like in java are immutable , and 16bits unicode UTF-16, 4 hexa digits or 2 bytes
 
@@ -50,7 +50,7 @@
 	you can access char in the using index , 
 	str[1]  : 'b'
 	you can use slice with string , slice is a method to extract a part of an array or string in our case
-	```javascript
+```javascript
 		str.slice(1) extract part of string straring from a given position until the end of string , it will print 'bc'
 		str.slice(1,2) ; extract part of string from given position and until the end position , 'b'
 		str.trim() // trim spaces 
@@ -61,33 +61,33 @@
 		'str'.split('delimiter',[limit]) //split a given string with , limit starting from 1st position
 		'str'.replace(regex ,value);
 		'str'.search(reg) //return first position
-	```
+```
 
 	Escaping lines in String with \:
-		```javascript
+```javascript
 			var str = 'written \
 						new Line';
-		```
+```
 	Construct string from char code array:
-		```javascript
+```javascript
 			String.prototype.fromCharCode.apply(null , arr);
 			String.prototype.charCodeAt(position);
-		``
+```
 ### Comparing two chars
 	when you compare characters always unifiy the case or use localCompare() method
-		```javascript
+```javascript
 		    //test without unifying case
 			'a' < 'b' //true
 			'a' < 'B' //false
 			//
-		```
+```
 
 
 ## Exceptions
 
 	the catch in excpetion you should surround your code with the try/catch block 
 
-	```javascript
+```javascript
 
 		try{
 
@@ -97,7 +97,7 @@
 			throw new Error(exception);
 		}
 
-	```	
+```	
 
 
 
@@ -107,7 +107,7 @@
 
 
 
-	```javascript
+```javascript
 		function increment (x){
  			return function(){
  				x++;
@@ -123,12 +123,12 @@
 		console.log(next()) //2;
 		console.log(next()) //3;
 
-	```	
+```	
 
 	as we see the cloure is veru usefull but it can be dangerous in same case, you should use it carefully , let see what will happen with this example
 
 
-	```javascript
+```javascript
 	  var results = [];
 	  for(i = 0 ; i < 5 ; i ++){
 	  	return results.push(function(){
@@ -138,10 +138,10 @@
 	  result[1]() // calling the first function in the array that normaly should return the result for the first element 0
 	  			//but suprisly not , it will return the last value of i ; i  = 5;
 
-	```
+```
 	to bypass this problem you should use IIFE (immediatly innoveked function expression), that will isolite the scope of current 'i'
 
-	```javascript
+```javascript
 	  var results = [];
 	  for(i = 0 ; i < 5 ; i ++){
 	  	(function(){
@@ -154,13 +154,13 @@
 	  	
 	  }
 
-	 ```
+```
 
 ## Arrays
 
 	some important array property and methods
 
-	```javascript
+```javascript
 
 		var arr = ['a' , 'b' ,'c '];
 		arr.length
@@ -182,17 +182,17 @@
 		arr.splice(0,0,'A','B') // insert A, B in the position 0 without removing any element
 
 
-	```
+```
 
 
 ## Synthaxe
 	some tips and tricks when about javascript synthaxe 
 	always yse '()' when you want to use literal object inside eval method
-		```javascript
+```javascript
 			eval('{name:"name value"}') // it will consider object as string with "name value" as value
 			//instead use ()
 			eval('({name:"name value"})') // => {name:'name value'}
-		```
+```
 		
 	### ASI (Automatic Simicolon  Insertion)
 			Javasctipt compiler insert automaticly the simicolon in this cases:
@@ -204,7 +204,7 @@
 		in some cases if you dont use ";" your code can break
 
 		Ex 1 : 
-			```javascript
+```javascript
 				//what you type
 				function test(){
 					return 
@@ -220,12 +220,12 @@
 					}
 				}
 
-			```	
+```	
 		the compiler add ; in the end of line , so the function will return undefined and not the object as expected
 
 		Ex 1 :
 			The javascript compiler dont put simicolon after '()'
-			```javascript
+```javascript
 			   //what you type 
 				function test(){}
 				test()
@@ -235,7 +235,7 @@
 				undefined['a','b'].forEach(function (item){console.log(item)});
 				//TypeError: Cannot read property 'b' of undefined
 
-			```
+```
 ## Operators
 		the "+" operator can be used with arrays
 		[1,2] + [3] : '1,23' :  it will convert arrays to strings and concatenate them

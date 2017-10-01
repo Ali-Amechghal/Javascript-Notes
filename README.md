@@ -159,11 +159,13 @@ and so on ..
 ```
 
 ## Objects
+```javascript
 
   var animal  = {}
   var rabbit  = Object.create(animal) // rabbit.prototype = animal , the rabbit will get all animal properties
   Object.getPrototypeOf(rabit) === animal) // check if rabbit is a subclass , it will return true
   obj.hasOwnPorperty('name') // test id obj has given property  and not inherited
+```
 
 
 

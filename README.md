@@ -127,7 +127,7 @@ and so on ..
      str.charAt(position);
      str.indexOf("stringforserach");
      str.subString(startPosition , endPosition);
-     str.subStr(firstPosition , endPosition);
+     str.subStr(firstPosition , Nbchars); // get Nb chars starting from a given position
      str.slice(startposition , endpotiion ) we can use nagative value it
      will start from the end in this case 
 
